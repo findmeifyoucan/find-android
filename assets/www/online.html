@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <script src="js/jquery.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </head>
+    <style type="text/css">
+        body{ background: #e91e63; text-align: center; }
+    </style>
+    <body style="margin:0px;padding:0px;overflow:hidden" onresize="vCenter();">
+        <iframe id="iframe" src="" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:150%;width:150%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" height="150%" width="150%"></iframe>
+        <script type="text/javascript">
+            function vCenter(){
+                var a = $("body").height();
+                var b = $(window).height();
+                c = (b-a)/2;
+                $("#loading").css('margin-top',c);
+            }
+            $(document).ready(function() {
+                // vCenter();
+                document.getElementById['iframe'].src = document.appUrl;
+            }); 
+        </script>
+    </body>
+</html>

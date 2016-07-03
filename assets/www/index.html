@@ -1,0 +1,37 @@
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+        <script src="js/jquery.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </head>
+    <style type="text/css">
+        body{ background: #e91e63; text-align: center; }
+    </style>
+    <body style="margin:0px;padding:0px;overflow:hidden" onresize="vCenter();">
+        <img id="loading" src="img/hourglass.svg" alt="">
+        <div id="token" style="display:none;">token</div>
+        <div id="iframe">
+            
+        </div>
+
+        <script type="text/javascript">
+            function vCenter(){
+                var a = $("body").height();
+                var b = $(window).height();
+                c = (b-a)/2;
+                $("#loading").css('margin-top',c);
+            }
+            $(document).ready(function() {
+                vCenter();
+                loadIframe();
+            }); 
+        </script>
+    </body>
+</html>
